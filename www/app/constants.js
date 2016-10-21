@@ -12,7 +12,7 @@ define(function () {
     // Random possible actions of customers
     const possibleActions = [
     	'took a long shot and went for',
-    	'together with whole fmaily went for',
+    	'together with whole family went for',
     	'started the dream holiday by going for'
     ];
 
