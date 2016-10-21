@@ -2,5 +2,25 @@
   "amd": {},
   "volo": {
     "baseUrl": "www/lib"
+  },
+  "name": "getyourguide",
+  "description": "This web project has the following setup:",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalena205/getyourguide.git"
+  },
+  "author": "Iulia Bejan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lalena205/getyourguide/issues"
+  },
+  "homepage": "https://github.com/lalena205/getyourguide#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
   }
 }
