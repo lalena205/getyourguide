@@ -1,17 +1,12 @@
-define(function () {
+define(['./constants'], function (constants) {
 
 	let getRandomInt = function(max) {
 		return Math.floor(Math.random() * max);
 	}
 
-	const possibleActions = [
-    	'took a long shot and went for',
-    	'together with whole fmaily went for',
-    	'started the dream holiday by going for'
-    ];
-	let actionsNo = possibleActions.length;
+	let actionsNo = constants.possibleActions.length;
 	let getRandomAction = function() {
-		return possibleActions[getRandomInt(actionsNo)];
+		return constants.possibleActions[getRandomInt(actionsNo)];
 	}
 
 	// Add some extensions

@@ -68,10 +68,11 @@ span.header-logo {
 	padding-right: 50px;
     padding-left: 50px;
     padding-top: 40px;
-    font-family: "Bad Script";
-    font-size: 24px;
+    font-family: "Roboto Slab";
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 900;
+    line-height: 2.5rem;
     color: #3a3a32;
 }
 
