@@ -11,14 +11,19 @@ define(function (require) {
     	'together with whole fmaily went for',
     	'started the dream holiday by going for'
     ];
-
-    initGoogleMap = googleMaps.init;
     
     let $customer1 = $('#customer1');
     let $customer2 = $('#customer2');
     let firstActive = true;
 
     $('document').ready(function() {
+    	initGoogleMap = googleMaps.init;
+		
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYIJ6bN3on6-fg2u1uQ3V1nERR6bvrnvE&callback=initGoogleMap";
+		document.body.appendChild(script);
+
     	setInterval(function() { 
     		$.ajax({
 				url: 'https://www.getyourguide.com/touring.json?key=2Gr0p7z96D',
