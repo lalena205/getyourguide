@@ -16,14 +16,7 @@ define(function (require) {
     let $customer2 = $('#customer2');
     let firstActive = true;
 
-    $('document').ready(function() {
-    	initGoogleMap = googleMaps.init;
-		
-		var script = document.createElement("script");
-		script.type = "text/javascript";
-		script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYIJ6bN3on6-fg2u1uQ3V1nERR6bvrnvE&callback=initGoogleMap";
-		document.body.appendChild(script);
-
+    let startSlideshow = function() {
     	setInterval(function() { 
     		$.ajax({
 				url: 'https://www.getyourguide.com/touring.json?key=2Gr0p7z96D',
@@ -39,7 +32,7 @@ define(function (require) {
 					firstActive = !firstActive;
 
 					$customerToShow.css('background-image', 'url(' + data.activityPictureUrl + ')');
-					$customerToShow.children('p').text(newContent);
+					$customerToShow.find('p').text(newContent);
 
 					$customerToHide.fadeOut(500, function() {
 						$customerToShow.fadeIn(3000);
@@ -48,5 +41,16 @@ define(function (require) {
 				}
 			});
     	}, 10000);
+    }
+
+    $('document').ready(function() {
+    	initGoogleMap = googleMaps.init;
+		
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDYIJ6bN3on6-fg2u1uQ3V1nERR6bvrnvE&callback=initGoogleMap";
+		document.body.appendChild(script);
+		//return;
+		startSlideshow();
     });
 });
